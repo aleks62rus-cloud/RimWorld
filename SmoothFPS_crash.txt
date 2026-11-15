@@ -1,0 +1,71 @@
+Игра завершилась некорректно 14.11. 23:14.
+Тип: бесконечный цикл (переполнение стека) – какой-то код вызывал сам себя, пока игра не остановилась. Обычно ошибка мода или два мода, вызывающие друг друга.
+Где: Цикл повторялся в клетке карты (145, 148) – проверьте, что там построено или лежит.
+Моды, активные в последние мгновения: [B98] Clear Gear – Gear Tab Overhaul, [B98] Clear Pickers – Choice Windows Overhaul, [B98] Clear Trade – Trade Window Overhaul, [B98] Smart Colonist Gear – Auto Equip Weapons & Armor, [B98] Clear Character – Character, Social & Needs
+Последняя ошибка перед этим: 2026-11-14 23:14:33.109 ERROR [Verse] Failed to resolve text. Trying again with English. Exception: System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+
+Полный отчёт: SmoothFPS_crash.txt в папке сохранений RimWorld. Если повторится, отправьте отчёт авторам указанных выше модов.
+
+Log: C:\Users\All\AppData\LocalLow\Ludeon Studios\RimWorld by Ludeon Studios\Logs\Player-prev.log
+Dump: C:\Users\All\AppData\Local\CrashDumps\RimWorld.exe.12020.dmp
+
+--- last lines ---
+    at Verse.PlayDataLoader.DoPlayLoad() [0x2B]
+    at Verse.PlayDataLoader.LoadAllPlayData(Boolean recovering) [0x1C]
+    at Verse.Root+<>c.<Start>b__10_1() [0x0]
+    at Verse.LongEventHandler.RunEventFromAnotherThread(Action action) [0x8]
+    at Verse.LongEventHandler+<>c.<UpdateCurrentAsynchronousEvent>b__28_0() [0x0]
+    at System.Threading.Thread+StartHelper.Callback(Object state) [0x0]
+    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state) [0x40]
+2026-11-14 23:13:50.602  INFO [Verse] [Smooth FPS] v1.7.2 loaded (messages: Logs\SmoothFPS.log).
+2026-11-14 23:13:50.637  INFO [Verse] [Steward – Kit] settings of Auto Pharmacy taken over.
+2026-11-14 23:13:50.649  INFO [Verse] [Steward – Kit] v1.1.0 loaded.
+2026-11-14 23:13:50.691  INFO [Verse] [Universal RimTranslator] v1.2.0 loaded (messages: Logs\URT.log).
+2026-11-14 23:13:55.146  INFO [Verse] [Clear Tabs] the bills tab of bolek98.misakbills is replaced by Clear Tabs (switch it back in the settings).
+2026-11-14 23:13:55.151  INFO [Verse] [Clear Tabs] the bills tab of bolek98.misakcharacter is replaced by Clear Tabs (switch it back in the settings).
+2026-11-14 23:13:55.154  INFO [Verse] [Clear Tabs] the bills tab of bolek98.misakgear is replaced by Clear Tabs (switch it back in the settings).
+2026-11-14 23:13:55.158  INFO [Verse] [Clear Tabs] the bills tab of bolek98.misakpickers is replaced by Clear Tabs (switch it back in the settings).
+2026-11-14 23:13:55.161  INFO [Verse] [Clear Tabs] the bills tab of bolek98.misaktrade is replaced by Clear Tabs (switch it back in the settings).
+2026-11-14 23:13:55.165  INFO [Verse] [Clear Tabs] the health tab of bolek98.misakbills is replaced by Clear Tabs (switch it back in the settings).
+2026-11-14 23:13:55.167  INFO [Verse] [Clear Tabs] the health tab of bolek98.misakcharacter is replaced by Clear Tabs (switch it back in the settings).
+2026-11-14 23:13:55.176  INFO [Verse] [Clear Tabs] the health tab of bolek98.misakgear is replaced by Clear Tabs (switch it back in the settings).
+2026-11-14 23:13:55.178  INFO [Verse] [Clear Tabs] the health tab of bolek98.misakpickers is replaced by Clear Tabs (switch it back in the settings).
+2026-11-14 23:13:55.181  INFO [Verse] [Clear Tabs] the health tab of bolek98.misaktrade is replaced by Clear Tabs (switch it back in the settings).
+2026-11-14 23:14:01.338  WARN [Verse] Translation data for language Russian / Русский has 11 errors. Generate translation report for more info.
+2026-11-14 23:14:01.629  INFO [Verse] [Secular Colony] styling: 1 table type(s), 80 hairstyles from 3 mods, 26 hair colours.
+2026-11-14 23:14:01.835  INFO [Verse] [Universal RimTranslator] v1.2.0 – Русский: 1744 untranslated texts found (def texts 1744, Keyed texts 0, already translated by language packs 24618; from the scan cache, checked in 53 ms), 1744 translated from memory (1009 remembered). Load 9 ms, scan 56 ms, apply 15 ms.
+2026-11-14 23:14:02.044  INFO [Verse] [Research Fixer] v1.0.0: 0 things without research in 0 groups, 0 misplaced.
+2026-11-14 23:14:33.108 ERROR [Verse] Bad string pass when reading rule [tradeAdj_fem] [tradeNoun_fem]
+2026-11-14 23:14:33.109 ERROR [Verse] Failed to resolve text. Trying again with English. Exception: System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+[Ref 7B29C65F]
+   at Verse.Grammar.GrammarResolver.AddRule(Rule rule) in Assembly-CSharp.dll:token 0x6003f48+0x27
+   at Verse.Grammar.GrammarResolver.ResolveUnsafe(String rootKeyword, GrammarRequest request, Boolean& success, String debugLabel, Boolean forceLog, Boolean useUntranslatedRules, List`1 extraTags, List`1 outTags, Boolean capitalizeFirstSentence) in Assembly-CSharp.dll:token 0x6003f46+0x16a
+   at Verse.Grammar.GrammarResolver.Resolve(String rootKeyword, GrammarRequest request, String debugLabel, Boolean forceLog, String untranslatedRootKeyword, List`1 extraTags, List`1 outTags, Boolean capitalizeFirstSentence) in Assembly-CSharp.dll:token 0x6003f44+0x1e
+2026-11-14 23:14:41.443  INFO [Verse] [Secular Colony] ideoligion thoughts: 191, ideoligion mental breaks: 2.
+2026-11-14 23:14:45.462  INFO [Verse] Initializing new game with mods:
+  - brrainz.harmony
+  - Ludeon.RimWorld
+  - Ludeon.RimWorld.Royalty (incompatible version)
+  - Ludeon.RimWorld.Ideology (incompatible version)
+  - Ludeon.RimWorld.Biotech (incompatible version)
+  - Ludeon.RimWorld.Anomaly (incompatible version)
+  - Ludeon.RimWorld.Odyssey
+  - bolek98.misakbills
+  - bolek98.misakcharacter
+  - bolek98.misakgear
+  - bolek98.misakpickers
+  - bolek98.misaktabs
+  - bolek98.misaktrade
+  - misak.haulsmarter
+  - misak.modsortmanager
+  - bolek98.researchatlas
+  - misak.secularcolony
+  - misak.researchedloadout
+  - misak.graphicstuner
+  - misak.colonyforeman
+  - misak.steward.crises
+  - misak.steward.kit
+  - misak.steward.schedules
+  - misak.steward.supplies
+  - misak.universalrimtranslator
+2026-11-14 23:14:55.293  INFO [Verse] [Auto Pharmacy] 21 drugs understood: Beer, Ambrosia, GoJuice, Luciferium, Penoxycyline, Flake, PsychiteTea, Yayo, SmokeleafJoint, WakeUp, MechSerumHealer, HemogenPack, JuggernautSerum, Drug_Psilocap, SentienceCatalyst, AP_PainSalve, AP_FeverTea, AP_Coagulant, AP_Antitoxin, AP_CalmingTea, AP_BurnGel
